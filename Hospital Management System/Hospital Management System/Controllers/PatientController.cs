@@ -198,7 +198,7 @@ namespace Hospital_Management_System.Controllers
         [Authorize(Roles = "Patient")]
         public ActionResult DoctorSchedule(int id)
         {
-            var schedule = db.Schedules.Include(c => c.Doctor).Single(c => c.DoctorId == id);
+            var schedule = db.Schedules.FirstOrDefault(c => c.DoctorId == id);
             return View(schedule);
         }
 

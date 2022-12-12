@@ -9,7 +9,7 @@ namespace Hospital_Management_System.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Hospital_Management_System.Models.ApplicationDbContext context)

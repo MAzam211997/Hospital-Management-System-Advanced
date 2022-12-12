@@ -27,7 +27,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><span>DashBoard</span>Admin</a>
+                <a class="navbar-brand" href="@Url.Action("Index", "Admin")">Admin  <span> Dashboard</span></a>
                 <ul class="nav navbar-top-links navbar-right"></ul>
             </div>
         </div><!-- /.container-fluid -->
@@ -64,6 +64,7 @@
             <li>
                 <button class="collapsible"><em class="fa fa-user-o">&nbsp; &nbsp;</em>Patient</button>
                 <div style="width: 100% !important" class="children content">
+                    @Html.ActionLink("Add Patient", "AddPatient", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
                     @Html.ActionLink("List of Patient", "ListOfPatients", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
                 </div>
             </li>

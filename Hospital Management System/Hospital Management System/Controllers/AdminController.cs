@@ -419,6 +419,57 @@ namespace Hospital_Management_System.Controllers
 
         }
 
+        //Add Patient 
+        [Authorize(Roles = "Admin")]
+        public ActionResult AddPatient()
+        {
+            //var collection = new Patient
+            //{
+            //    ApplicationUser = new RegisterViewModel(),
+            //    Doctor = new Doctor(),
+            //    Departments = db.Department.ToList()
+            //};
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> AddPatient(Patient model)
+        {
+            var user = new ApplicationUser
+            {
+                UserName = model.EmailAddress,
+                Email = model.EmailAddress,
+                UserRole = "Patient",
+                RegisteredDate = DateTime.Now.Date
+            };
+            var result = await UserManager.CreateAsync(user);
+            if (result.Succeeded)
+            {
+                await UserManager.AddToRoleAsync(user.Id, "Patient");
+                var doctor = new Patient
+                {
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                    FullName = model.FirstName + " " + model.LastName,
+                    EmailAddress = model.EmailAddress,
+                    Contact = model.Contact,
+                    PhoneNo = model.PhoneNo,
+                    Gender = model.Gender,
+                    BloodGroup = model.BloodGroup,
+                    ApplicationUserId = user.Id,
+                    DateOfBirth = model.DateOfBirth,
+                    Address = model.Address
+                };
+                db.Patients.Add(doctor);
+                db.SaveChanges();
+                return RedirectToAction("ListOfPatients");
+            }
+
+            return HttpNotFound();
+
+        }
+
         //List Of Doctors
         [Authorize(Roles = "Admin")]
         public ActionResult ListOfDoctors()

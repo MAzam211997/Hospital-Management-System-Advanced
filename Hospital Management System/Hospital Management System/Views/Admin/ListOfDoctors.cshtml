@@ -21,11 +21,13 @@
 
 <p>
     @Html.ActionLink("Add Doctor", "AddDoctor", null, new { @class = "btn btn-primary" })
+    &nbsp;
+    <a target="_blank" href="~/Reporting/DoctorsReport.aspx" class = "btn btn-info">View Report</a>
 </p>
 <table id="table_id" class="table">
     <thead>
         <tr>
-            
+
             <th>
                 Name
             </th>
@@ -54,7 +56,7 @@
         @foreach (var item in Model)
         {
             <tr>
-                
+
                 <td>
                     @Html.DisplayFor(modelItem => item.FullName)
                 </td>
@@ -86,6 +88,7 @@
     </tbody>
 
 </table>
+
 
 @section scripts {
     <script>
