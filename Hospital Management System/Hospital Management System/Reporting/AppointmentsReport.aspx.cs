@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Hospital_Management_System.Models;
 using Microsoft.Reporting.WebForms;
+using System.Data.Entity;
 
 namespace Hospital_Management_System.Reporting
 {
@@ -22,9 +23,24 @@ namespace Hospital_Management_System.Reporting
                 AppointmentReportViewer.ToolBarItemBorderStyle = BorderStyle.Solid;
                 AppointmentReportViewer.LocalReport.ReportPath = Server.MapPath("AppointmentsReport.rdlc");
                 var entities = new ApplicationDbContext();
-                ReportDataSource datasource = new ReportDataSource("AppointmentsDataSet", (entities.Appointments.Include(c => c.Doctor).Include(c => c.Patient)
-                .Where(c => c.Status == true).Where(c => c.AppointmentDate >= date).ToList()));
+                dynamic datasource = entities.Appointments.Include(c => c.Doctor).Include(c => c.Patient)
+                .Where(c => c.Status == true).ToList();
+                //foreach (var item in datasource.Value.ToString().ToList())
+                //{
+
+                //    var doctor = item;
+                //}
+                ReportParameter[] parms = new ReportParameter[1];
+                //parms[0] = new ReportParameter("param_name", textbox(n - 1).text);
+                //parms[1] = new ReportParameter("param_course", textbox(n).text);
+                //AppointmentReportViewer.LocalReport.SetParameters(parms);
+               // AppointmentReportViewer.ReportRefresh();
                 AppointmentReportViewer.LocalReport.DataSources.Clear();
+                //AppointmentReportViewer.LocalReport.DataSources.Add(new ReportDataSource(datasource, dataset.Tables[0]));
+                //AppointmentReportViewer.LocalReport.DataSources.Add(new ReportDataSource("reportDataSource1", dataset.Tables[1]));
+                //AppointmentReportViewer.LocalReport.DataSources.Add(new ReportDataSource("reportDataSource2", dataset.Tables[2]));
+                //AppointmentReportViewer.LocalReport.DataSources.Add(new ReportDataSource("reportDataSource3", dataset.Tables[3]));
+                //AppointmentReportViewer.LocalReport.DataSources.Add(new ReportDataSource("reportDataSource4", dataset.Tables[4]));
                 AppointmentReportViewer.LocalReport.DataSources.Add(datasource);
 
             }
