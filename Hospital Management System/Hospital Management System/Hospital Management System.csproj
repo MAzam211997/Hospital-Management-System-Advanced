@@ -185,6 +185,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppointmentsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppointmentsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -419,6 +424,13 @@
       <DependentUpon>PatientsDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporting\AppointmentsReport.aspx.cs">
+      <DependentUpon>AppointmentsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\AppointmentsReport.aspx.designer.cs">
+      <DependentUpon>AppointmentsReport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Reporting\PatientsReport.aspx.cs">
       <DependentUpon>PatientsReport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -608,6 +620,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Reporting\AppointmentsReport.aspx" />
     <Content Include="Reporting\PatientsReport.aspx" />
     <Content Include="Reporting\DoctorsReport.aspx" />
     <Content Include="Scripts\bootbox.js" />
@@ -639,6 +652,17 @@
     <Content Include="Content\Layout\vendors\fonts\ionicons.woff2" />
     <Content Include="PatientsDataSet.xsc">
       <DependentUpon>PatientsDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="AppointmentsDataSet.xsc">
+      <DependentUpon>AppointmentsDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="AppointmentsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AppointmentsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="AppointmentsDataSet.xss">
+      <DependentUpon>AppointmentsDataSet.xsd</DependentUpon>
     </Content>
     <None Include="PatientsDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
@@ -1016,6 +1040,7 @@
     <EmbeddedResource Include="Migrations\202212101322520_MedicalTest.resx">
       <DependentUpon>202212101322520_MedicalTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\AppointmentsReport.rdlc" />
     <EmbeddedResource Include="Reporting\DataSets\PatientsReport.rdlc" />
     <EmbeddedResource Include="Reporting\Report1.rdlc" />
     <EmbeddedResource Include="Reporting\DoctorsReport.rdlc" />
