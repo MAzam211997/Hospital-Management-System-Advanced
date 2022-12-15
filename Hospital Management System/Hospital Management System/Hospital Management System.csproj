@@ -445,6 +445,11 @@
     <Compile Include="Reporting\DoctorsReport.aspx.designer.cs">
       <DependentUpon>DoctorsReport.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ScheduleDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScheduleDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="_aspnet_Hospital_Management_System_20181110095545DataSet.cs">
@@ -457,6 +462,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-Hospital Management System-20181110095545.mdf" />
+    <Content Include="App_Data\aspnet-Hospital Management System-20181110095545_log.ldf">
+      <DependentUpon>aspnet-Hospital Management System-20181110095545.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Chosen\chosen-sprite.png" />
@@ -673,6 +682,17 @@
       <DependentUpon>PatientsDataSet.xsd</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\Usman.pubxml" />
+    <Content Include="ScheduleDataSet.xsc">
+      <DependentUpon>ScheduleDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="ScheduleDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ScheduleDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ScheduleDataSet.xss">
+      <DependentUpon>ScheduleDataSet.xsd</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\chosen.jquery.min.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
@@ -887,7 +907,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Content\Layout\resources\data\" />
   </ItemGroup>
   <ItemGroup>
@@ -1044,6 +1063,7 @@
     <EmbeddedResource Include="Reporting\DataSets\PatientsReport.rdlc" />
     <EmbeddedResource Include="Reporting\Report1.rdlc" />
     <EmbeddedResource Include="Reporting\DoctorsReport.rdlc" />
+    <EmbeddedResource Include="ScheduleReport.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

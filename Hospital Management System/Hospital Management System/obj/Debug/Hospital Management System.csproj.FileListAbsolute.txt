@@ -277,3 +277,53 @@ D:\University\Project\Hospital-Management-System\Hospital Management System\Hosp
 D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AppointmentDateRequired.resources
 D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.updatedatabase.resources
 D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.dropappointmentdaterequired.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital Management System.csproj.AssemblyReference.cache
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.initialModel.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddDepartmentInDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddReqiuredFieldInDepartment.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddUserNameToRegisterViewModel.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddAmbulanceInDb.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddAmbulanceDriverInDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddUserRole.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.userrole.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.addAmbulanceDriversInDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddAmbulanceToDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.ChangesInAmbulanceDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddMedicineInDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddRegisteredDateInAspNetUsersDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddPatientInDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.ChangeReturnTypeInPatientDb.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.DropDownThePatientInDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AgainAddPatientInDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddDoctorInDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddScheduleInDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.ChangeInScheduleDb.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.DropScheduleForSomeChanges.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AgainAddScheduleInDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AgainAddScheduleInDB1.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddFullNameInDoctorDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddPrescriptionInDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.DropPrescriptionForSomeChanges.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AgainAddPrescriptionInDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AgainAddPrescriptionInDB1.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.dropprescription.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.Prescription.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddFullNameInPatientDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddUserNameInPrescriptionDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.ChangeLongtoStringInPatient.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddReviewsInDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.ChangeInPrescriptionDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddPrescriptionDateinPrescriptionDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddAppointmentInDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.MakeNullableDateInAppointmentDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddAnnouncementInDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddStatusInDoctorDb.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddComplaintInDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddReplyInComplaintDB.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.DropRiviewFromDb.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AppointmentDateRequired.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.updatedatabase.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.dropappointmentdaterequired.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.MedicalTest.resources
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital Management System.csproj.GenerateResource.cache
+C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital Management System.csproj.CoreCompileInputs.cache
