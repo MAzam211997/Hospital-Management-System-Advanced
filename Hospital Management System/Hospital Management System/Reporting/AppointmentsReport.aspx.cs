@@ -36,11 +36,6 @@ namespace Hospital_Management_System.Reporting
                 //AppointmentReportViewer.LocalReport.SetParameters(parms);
                // AppointmentReportViewer.ReportRefresh();
                 AppointmentReportViewer.LocalReport.DataSources.Clear();
-                //AppointmentReportViewer.LocalReport.DataSources.Add(new ReportDataSource(datasource, dataset.Tables[0]));
-                //AppointmentReportViewer.LocalReport.DataSources.Add(new ReportDataSource("reportDataSource1", dataset.Tables[1]));
-                //AppointmentReportViewer.LocalReport.DataSources.Add(new ReportDataSource("reportDataSource2", dataset.Tables[2]));
-                //AppointmentReportViewer.LocalReport.DataSources.Add(new ReportDataSource("reportDataSource3", dataset.Tables[3]));
-                //AppointmentReportViewer.LocalReport.DataSources.Add(new ReportDataSource("reportDataSource4", dataset.Tables[4]));
                 AppointmentReportViewer.LocalReport.DataSources.Add(datasource);
 
             }

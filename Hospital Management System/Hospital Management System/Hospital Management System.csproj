@@ -445,6 +445,13 @@
     <Compile Include="Reporting\DoctorsReport.aspx.designer.cs">
       <DependentUpon>DoctorsReport.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Reporting\ScheduleReport.aspx.cs">
+      <DependentUpon>ScheduleReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\ScheduleReport.aspx.designer.cs">
+      <DependentUpon>ScheduleReport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ScheduleDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -631,6 +638,7 @@
     <Content Include="Reporting\AppointmentsReport.aspx" />
     <Content Include="Reporting\PatientsReport.aspx" />
     <Content Include="Reporting\DoctorsReport.aspx" />
+    <Content Include="Reporting\ScheduleReport.aspx" />
     <Content Include="Scripts\bootbox.js" />
     <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -1047,9 +1055,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reporting\AppointmentsReport.rdlc" />
     <EmbeddedResource Include="Reporting\DataSets\PatientsReport.rdlc" />
+    <EmbeddedResource Include="Reporting\DataSets\ScheduleReport.rdlc" />
     <EmbeddedResource Include="Reporting\Report1.rdlc" />
     <EmbeddedResource Include="Reporting\DoctorsReport.rdlc" />
-    <EmbeddedResource Include="ScheduleReport.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
