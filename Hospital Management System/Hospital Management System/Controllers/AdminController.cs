@@ -92,6 +92,36 @@ namespace Hospital_Management_System.Controllers
             return RedirectToAction("DepartmentList");
         }
 
+        //Laboratory Test List
+        [Authorize(Roles = "Admin")]
+        public ActionResult LaboratoryTestList()
+        {
+            var model = db.MedicalTest.ToList();
+            return View(model);
+        }
+
+        //Add Laboratory Test
+        [Authorize(Roles = "Admin")]
+        public ActionResult AddLaboratoryTest()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddLaboratoryTest(MedicalTest test)
+        {
+            if (db.Department.Any(c => c.Name == test.Name))
+            {
+                ModelState.AddModelError("Name", "Name already present!");
+                return View(test);
+            }
+
+            db.MedicalTest.Add(test);
+            db.SaveChanges();
+            return RedirectToAction("LaboratoryTestList");
+        }
+
         //Edit Department
         [Authorize(Roles = "Admin")]
         public ActionResult EditDepartment(int id)
@@ -127,6 +157,43 @@ namespace Hospital_Management_System.Controllers
             db.Department.Remove(department);
             db.SaveChanges();
             return RedirectToAction("DepartmentList");
+        }
+        
+        //Edit Department
+        [Authorize(Roles = "Admin")]
+        public ActionResult EditLaboratoryTest(int id)
+        {
+            var model = db.MedicalTest.SingleOrDefault(c => c.Id == id);
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditLaboratoryTest(int id, MedicalTest model)
+        {
+            var test = db.MedicalTest.Single(c => c.Id == id);
+            test.Name = model.Name;
+            test.Description = model.Description;
+            test.Status = model.Status;
+            db.SaveChanges();
+            return RedirectToAction("LaboratoryTestList");
+        }
+
+        [Authorize(Roles = "Admin")]
+        public ActionResult DeleteLaboratoryTest(int? id)
+        {
+            var department = db.MedicalTest.Single(c => c.Id == id);
+            return View(department);
+        }
+
+        [HttpPost, ActionName("DeleteLaboratoryTest")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteLaboratoryTest(int id)
+        {
+            var test = db.MedicalTest.SingleOrDefault(c => c.Id == id);
+            db.MedicalTest.Remove(test);
+            db.SaveChanges();
+            return RedirectToAction("LaboratoryTestList");
         }
 
         //End Department Section

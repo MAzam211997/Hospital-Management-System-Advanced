@@ -38,7 +38,7 @@
                             @Html.TextBoxFor(m => m.Email, new {@placeholder = "Your Email", id = "email"})
                             @*@Html.ValidationMessageFor(m => m.Email, "", new {@class = "text-danger"})*@
                         </div>
-                        @*@{
+                        @{
                             var list = new List<RegisterViewModel>
                             {
                                 new RegisterViewModel {UserRole = "Patient"},
@@ -50,7 +50,7 @@
                             <label for="role">User Role</label>
                             @Html.DropDownListFor(m => m.UserRole, new SelectList(list, "UserRole", "UserRole"), "--Select Role--", new {@id = "role"})
                             @Html.ValidationMessageFor(m => m.UserRole, "", new {@class = "text-danger"})
-                        </div>*@
+                        </div>
                         <div>
                             <label for="password">Password<span style="color: red; font-weight: bold">*</span></label>
                             @Html.PasswordFor(m => m.Password, new {@placeholder = "Password", id = "password"})

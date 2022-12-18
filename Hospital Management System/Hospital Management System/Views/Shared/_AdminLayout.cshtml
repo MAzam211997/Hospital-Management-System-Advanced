@@ -62,6 +62,13 @@
                 </div>
             </li>
             <li>
+                <button class="collapsible"><em class="fa fa-stethoscope">&nbsp; &nbsp;</em>Laboratory Test</button>
+                <div style="width: 100% !important" class="children content">
+                    @Html.ActionLink("Add Laboratory Test", "AddLaboratoryTest", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
+                    @Html.ActionLink("List of Laboratory Test", "LaboratoryTestList", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
+                </div>
+            </li>
+            <li>
                 <button class="collapsible"><em class="fa fa-user-o">&nbsp; &nbsp;</em>Patient</button>
                 <div style="width: 100% !important" class="children content">
                     @Html.ActionLink("Add Patient", "AddPatient", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
