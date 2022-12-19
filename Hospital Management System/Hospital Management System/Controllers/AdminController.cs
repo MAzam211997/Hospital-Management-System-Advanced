@@ -821,6 +821,20 @@ namespace Hospital_Management_System.Controllers
 
         }
 
+        //Add Operation Theatre
+        [Authorize(Roles = "Admin")]
+        public ActionResult AddOperationTheatre()
+        {
+            var collection = new OperationTheatreCollection
+            {
+                Appointment = new Appointment(),
+                OperationTheatre = new OperationTheatre(),
+                Patients = db.Patients.ToList(),
+                Doctors = db.Doctors.ToList()
+            };
+            return View(collection);
+        }
+
         //List of Active Appointment
         [Authorize(Roles = "Admin")]
         public ActionResult ListOfAppointments()
@@ -829,6 +843,53 @@ namespace Hospital_Management_System.Controllers
             var appointment = db.Appointments.Include(c => c.Doctor).Include(c => c.Patient)
                 .Where(c => c.Status == true).Where(c => c.AppointmentDate >= date).ToList();
             return View(appointment);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddOperationTheatre(OperationTheatreCollection model)
+        {
+            var collection = new OperationTheatreCollection
+            {
+                Appointment = model.Appointment,
+                OperationTheatre = model.OperationTheatre,
+                Patients = db.Patients.ToList(),
+                Doctors = db.Doctors.ToList()
+            };
+            if (model.Appointment.AppointmentDate >= DateTime.Now.Date)
+            {
+                var ot = new OperationTheatre();
+                ot.PatientId = model.OperationTheatre.PatientId;
+                ot.AppointmentId = model.OperationTheatre.Id;
+                ot.DoctorId = model.OperationTheatre.DoctorId;
+                ot.OperationDate = model.OperationTheatre.OperationDate;
+                ot.Problem = model.OperationTheatre.Problem;
+                ot.Status = model.OperationTheatre.Status;
+                db.OperationTheatre.Add(ot);
+                db.SaveChanges();
+
+                //if (model.OperationTheatre.Status == true)
+                //{
+                    return RedirectToAction("ListOfOperationTheatre");
+                //}
+                //else
+                //{
+                //    return RedirectToAction("PendingAppointments");
+                //}
+            }
+
+            ViewBag.Messege = "Please Enter the Date greater than today or equal!!";
+            return View(collection);
+
+        }
+
+        //List Of Operation Theatre
+        [Authorize(Roles = "Admin")]
+        public ActionResult ListOfOperationTheatre()
+        {
+            var date = DateTime.Now.Date;
+            var operation = db.OperationTheatre.Include(c => c.Doctor).Include(c => c.MedicalTest).Include(c => c.Appointment).Include(c => c.Patient)
+                .Where(c => c.Status == true).Where(c => c.OperationDate >= date).ToList();
+            return View(operation);
         }
 
         //List of pending Appointments

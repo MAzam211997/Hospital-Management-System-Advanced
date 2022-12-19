@@ -38,6 +38,7 @@ namespace Hospital_Management_System.Models
         public DbSet<Complaint> Complaints { get; set; }
        
         public DbSet<MedicalTest> MedicalTest { get; set; }
+        public DbSet<OperationTheatre> OperationTheatre { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

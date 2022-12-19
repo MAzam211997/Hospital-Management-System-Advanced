@@ -15,5 +15,7 @@ namespace Hospital_Management_System.Models
         public string Description { get; set; }
     
         public string Status { get; set; }
+        [Display(Name = "Charges Per Test")]
+        public double ChargesPerTest { get; set; }
     }
 }
