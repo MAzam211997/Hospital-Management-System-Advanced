@@ -12,7 +12,7 @@
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_DbContextTypeFullName>Hospital_Management_System.Models.ApplicationDbContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
-    <NameOfLastUsedPublishProfile>Usman</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>C:\Users\Muhammad Azam\source\repos\Hospital-Management-System\Hospital Management System\Hospital Management System\Properties\PublishProfiles\FTPProfile.pubxml</NameOfLastUsedPublishProfile>
     <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
     <Use64BitIISExpress />
     <IISExpressSSLPort />

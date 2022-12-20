@@ -43,13 +43,22 @@
                 @Html.ValidationMessageFor(model => model.Appointment.DoctorId, "", new { @class = "text-danger" })
             </div>
         </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Appointment.Id, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Appointment.Id, new SelectList(Model.Appointments, "Id", "Problem"), "Select Appointment", new { @id = "dropdown3", @class = "form-control" })
+                <br />
+                @Html.ValidationMessageFor(model => model.Appointment.Id, "", new { @class = "text-danger" })
+            </div>
+        </div>
         
         <div class="form-group">
-            @Html.LabelFor(model => model.OperationTheatre.MedicalTestId, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.MedicalTestModel.Id, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownListFor(model => model.OperationTheatre.MedicalTestId, new SelectList(Model.MedicalTests, "Id", "Name"), "Select Medical Test", new { @id = "dropdown3", @class = "form-control" })
+                @Html.DropDownListFor(model => model.MedicalTestModel.Id, new SelectList(Model.MedicalTests, "Id", "Name"), "Select Medical Test", new { @id = "dropdown4", @class = "form-control" })
                 <br />
-                @Html.ValidationMessageFor(model => model.OperationTheatre.MedicalTestId, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.MedicalTestModel.Id, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -66,18 +75,18 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Appointment.Problem, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.OperationTheatre.Problem, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextAreaFor(model => model.Appointment.Problem, new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.Appointment.Problem, "", new { @class = "text-danger" })
+                @Html.TextAreaFor(model => model.OperationTheatre.Problem, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.OperationTheatre.Problem, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Appointment.Status, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.OperationTheatre.Status, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.CheckBoxFor(model => model.Appointment.Status, new { @style = "margin-top:10px" })
-                @Html.ValidationMessageFor(model => model.Appointment.Status, "", new { @class = "text-danger" })
+                @Html.CheckBoxFor(model => model.OperationTheatre.Status, new { @style = "margin-top:10px" })
+                @Html.ValidationMessageFor(model => model.OperationTheatre.Status, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -109,6 +118,12 @@
         });
         $(function () {
             $("#dropdown2").chosen();
+        });
+        $(function () {
+            $("#dropdown3").chosen();
+        });
+        $(function () {
+            $("#dropdown4").chosen();
         });
     </script>
 }

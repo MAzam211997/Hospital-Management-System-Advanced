@@ -57,6 +57,12 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Configuration.ConfigurationBuilders.Base, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Configuration.ConfigurationBuilders.Base.2.0.0\lib\Net471\Microsoft.Configuration.ConfigurationBuilders.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Configuration.ConfigurationBuilders.UserSecrets, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.2.0.0\lib\Net471\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
@@ -196,6 +202,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="CollectionViewModels\AmbulanceCollection.cs" />
+    <Compile Include="CollectionViewModels\OperationTheatreCollection.cs" />
     <Compile Include="CollectionViewModels\AppointmentCollection.cs" />
     <Compile Include="CollectionViewModels\CollectionOfAll.cs" />
     <Compile Include="CollectionViewModels\DoctorCollection.cs" />
@@ -399,11 +406,24 @@
     <Compile Include="Migrations\202212101322520_MedicalTest.designer.cs">
       <DependentUpon>202212101322520_MedicalTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212180629313_OperationTheatre.cs" />
+    <Compile Include="Migrations\202212180629313_OperationTheatre.designer.cs">
+      <DependentUpon>202212180629313_OperationTheatre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212201559285_changes.cs" />
+    <Compile Include="Migrations\202212201559285_changes.designer.cs">
+      <DependentUpon>202212201559285_changes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212201722145_changes1.cs" />
+    <Compile Include="Migrations\202212201722145_changes1.designer.cs">
+      <DependentUpon>202212201722145_changes1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Ambulance.cs" />
     <Compile Include="Models\AmbulanceDriver.cs" />
     <Compile Include="Models\Announcement.cs" />
+    <Compile Include="Models\OperationTheatre.cs" />
     <Compile Include="Models\Appointment.cs" />
     <Compile Include="Models\Complaint.cs" />
     <Compile Include="Models\DeleteAnnouncementOnExpire.cs" />
@@ -891,6 +911,14 @@
     <Content Include="_aspnet_Hospital_Management_System_20181110095545DataSet.xsc">
       <DependentUpon>_aspnet_Hospital_Management_System_20181110095545DataSet.xsd</DependentUpon>
     </Content>
+    <Content Include="Views\Admin\AddLaboratoryTest.cshtml" />
+    <Content Include="Views\Admin\LaboratoryTestList.cshtml" />
+    <Content Include="Views\Admin\DeleteLaboratoryTest.cshtml" />
+    <Content Include="Views\Admin\EditLaboratoryTest.cshtml" />
+    <Content Include="Views\Admin\AddOperationTheatre.cshtml" />
+    <Content Include="Views\Admin\ListOfOperationTheatre.cshtml" />
+    <Content Include="Views\Admin\EditOperationTheatre.cshtml" />
+    <Content Include="Views\Admin\DetailOfOperationTheatre.cshtml" />
     <None Include="_aspnet_Hospital_Management_System_20181110095545DataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>_aspnet_Hospital_Management_System_20181110095545DataSet.Designer.cs</LastGenOutput>
@@ -1052,6 +1080,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212101322520_MedicalTest.resx">
       <DependentUpon>202212101322520_MedicalTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212180629313_OperationTheatre.resx">
+      <DependentUpon>202212180629313_OperationTheatre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212201559285_changes.resx">
+      <DependentUpon>202212201559285_changes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212201722145_changes1.resx">
+      <DependentUpon>202212201722145_changes1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reporting\AppointmentsReport.rdlc" />
     <EmbeddedResource Include="Reporting\DataSets\PatientsReport.rdlc" />
