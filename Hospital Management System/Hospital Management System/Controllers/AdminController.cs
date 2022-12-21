@@ -905,7 +905,7 @@ namespace Hospital_Management_System.Controllers
             var collection = new OperationTheatreCollection();
 
             collection.OperationTheatre = db.OperationTheatre.Single(c => c.Id == id);
-            collection.Appointments = db.Appointments.Where(x => x.Id == collection.OperationTheatre.AppointmentId).ToList();
+            collection.Appointments = db.Appointments.ToList();
             collection.MedicalTests = db.MedicalTest.ToList();
             collection.Patients = db.Patients.ToList();
             collection.Doctors = db.Doctors.ToList();
@@ -920,11 +920,13 @@ namespace Hospital_Management_System.Controllers
         {
             var collection = new OperationTheatreCollection
             {
-                Appointment = model.Appointment,
+                OperationTheatre = model.OperationTheatre,
                 Patients = db.Patients.ToList(),
-                Doctors = db.Doctors.ToList()
-            };
-            if (model.Appointment.AppointmentDate >= DateTime.Now.Date)
+                Doctors = db.Doctors.ToList()   ,
+                Appointments = db.Appointments.ToList(),
+            MedicalTests = db.MedicalTest.ToList()
+        };
+            if (model.OperationTheatre.OperationDate >= DateTime.Now.Date)
             {
                 var appointment = db.OperationTheatre.Single(c => c.Id == id);
                 appointment.PatientId = model.Appointment.PatientId;
