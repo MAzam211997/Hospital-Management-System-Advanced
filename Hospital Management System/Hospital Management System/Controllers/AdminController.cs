@@ -922,28 +922,31 @@ namespace Hospital_Management_System.Controllers
             {
                 OperationTheatre = model.OperationTheatre,
                 Patients = db.Patients.ToList(),
-                Doctors = db.Doctors.ToList()   ,
+                Doctors = db.Doctors.ToList(),
                 Appointments = db.Appointments.ToList(),
-            MedicalTests = db.MedicalTest.ToList()
-        };
+                MedicalTests = db.MedicalTest.ToList()
+            };
             if (model.OperationTheatre.OperationDate >= DateTime.Now.Date)
             {
-                var appointment = db.OperationTheatre.Single(c => c.Id == id);
-                appointment.PatientId = model.Appointment.PatientId;
-                appointment.DoctorId = model.Appointment.DoctorId;
-                appointment.OperationDate = model.OperationTheatre.OperationDate;
-                appointment.AppointmentId = model.Appointment.Id;
-                appointment.Problem = model.OperationTheatre.Problem;
-                appointment.Status = model.OperationTheatre.Status;
+                //var appointment = db.OperationTheatre.Single(c => c.Id == id);
+
+                var ot = db.OperationTheatre.Single(c => c.Id == id);
+                ot.PatientId = model.OperationTheatre.PatientId;
+                ot.AppointmentId = model.OperationTheatre.AppointmentId;
+                ot.DoctorId = model.OperationTheatre.DoctorId;
+                ot.MedicalTestId = model.OperationTheatre.MedicalTestId;
+                ot.OperationDate = model.OperationTheatre.OperationDate;
+                ot.Problem = model.OperationTheatre.Problem;
+                ot.Status = model.OperationTheatre.Status;
+                //appointment.PatientId = model.Appointment.PatientId;
+                //appointment.DoctorId = model.Appointment.DoctorId;
+                //appointment.OperationDate = model.OperationTheatre.OperationDate;
+                //appointment.AppointmentId = model.Appointment.Id;
+                //appointment.Problem = model.OperationTheatre.Problem;
+                //appointment.Status = model.OperationTheatre.Status;
                 db.SaveChanges();
-                if (model.OperationTheatre.Status == true)
-                {
-                    return RedirectToAction("ListOfAppointments");
-                }
-                else
-                {
-                    return RedirectToAction("PendingAppointments");
-                }
+                return RedirectToAction("ListOfOperationTheatre");
+               
             }
             ViewBag.Messege = "Please Enter the Date greater than today or equal!!";
 
