@@ -20,9 +20,12 @@
 <h2>List Of Patients</h2>
   &nbsp;
 <a target="_blank" href="~/Reporting/PatientsReport.aspx" class="btn btn-info">View Report</a>
-<table id="table_id" class="table">
+<table id="table_id" class="table ">
     <thead>
         <tr>
+            <th>
+               MR No.
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.FullName)
             </th>
@@ -42,6 +45,9 @@
         @foreach (var item in Model)
         {
             <tr>
+                <td>
+                    MR-0000-@item.Id
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.FullName)
                 </td>

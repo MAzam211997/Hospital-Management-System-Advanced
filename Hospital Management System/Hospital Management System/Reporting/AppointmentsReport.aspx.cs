@@ -25,18 +25,12 @@ namespace Hospital_Management_System.Reporting
                 var entities = new ApplicationDbContext();
                 dynamic datasource = entities.Appointments.Include(c => c.Doctor).Include(c => c.Patient)
                 .Where(c => c.Status == true).ToList();
-                //foreach (var item in datasource.Value.ToString().ToList())
-                //{
 
-                //    var doctor = item;
-                //}
-                ReportParameter[] parms = new ReportParameter[1];
-                //parms[0] = new ReportParameter("param_name", textbox(n - 1).text);
-                //parms[1] = new ReportParameter("param_course", textbox(n).text);
-                //AppointmentReportViewer.LocalReport.SetParameters(parms);
-               // AppointmentReportViewer.ReportRefresh();
+                //var entities = new ApplicationDbContext();
+                ReportDataSource datasource1 = new ReportDataSource("AppointmentsDataSet", (from app in entities.Appointments  join d in entities.Doctors on app.DoctorId equals d.Id
+                                                                               select app));
                 AppointmentReportViewer.LocalReport.DataSources.Clear();
-                AppointmentReportViewer.LocalReport.DataSources.Add(datasource);
+                AppointmentReportViewer.LocalReport.DataSources.Add(datasource1);
 
             }
         }

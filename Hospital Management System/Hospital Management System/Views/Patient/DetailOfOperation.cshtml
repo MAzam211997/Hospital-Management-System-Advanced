@@ -1,0 +1,95 @@
+﻿@model Hospital_Management_System.Models.OperationTheatre
+
+@{
+    ViewBag.Title = "Detail Of Operation";
+    Layout = "~/Views/Shared/_PatientLayout.cshtml";
+}
+
+<div class="row">
+    <ol class="breadcrumb">
+        <li>
+            <a href="#">
+                <em class="fa fa-home"></em>
+            </a>
+        </li>
+        <li class="active"> Operations</li>
+        <li class="active">Operation Detail</li>
+    </ol>
+</div>
+
+<h2>Operation Detail</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Patient Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Doctor.FullName)
+        </dd>
+
+        <dt>
+            Doctor Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patient.FullName)
+        </dd>
+        
+        <dt>
+            Appointment Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Appointment.Problem)
+        </dd>
+        
+        
+        <dt>
+            Medical Test
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicalTest.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OperationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OperationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Problem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Problem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @if (Model.Status)
+            {
+                @("Active")
+            }
+            else
+            {
+                @("Inactive")
+            }
+        </dd>
+
+    </dl>
+</div>
+<p>
+
+        @Html.ActionLink("Back to List", "ListOfOperations")
+
+</p>

@@ -16,6 +16,12 @@
 
     <!--Custom Font-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <style>
+        .font-size {
+            font-size: 12px;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,7 +34,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="@Url.Action("Index", "Patient")">Patient <span> Dashboard</span></a>
+                <a class="navbar-brand font-size" href="@Url.Action("Index", "Patient")">Patient <span> Dashboard</span></a>
                 <ul class="nav navbar-top-links navbar-right"></ul>
             </div>
         </div><!-- /.container-fluid -->
@@ -39,50 +45,57 @@
                 <img src="~/Content/img/Administrator.png" class="img-responsive" alt="">
             </div>
             <div class="profile-usertitle">
-                <div class="profile-usertitle-name">@User.Identity.Name</div>
+                <div  class="profile-usertitle-name font-size">@User.Identity.Name</div>
                 <div class="profile-usertitle-status"><span class="indicator label-success"></span>Patient</div>
             </div>
             <div class="clear"></div>
         </div>
         <div class="divider"></div>
         <ul class="nav menu">
-            <li class="active"><a href="@Url.Action("Index", "Patient")"><em class="fa fa-dashboard">&nbsp;</em> DashBoard</a></li>
+            <li class="active font-size"><a href="@Url.Action("Index", "Patient")"><em class="fa fa-dashboard">&nbsp;</em> DashBoard</a></li>
             <li>
-                <button class="collapsible"><em class="fa fa-user-o">&nbsp; &nbsp;</em>Profile</button>
+                <button  class="collapsible font-size"><em class="fa fa-user-o">&nbsp; &nbsp;</em>Profile</button>
                 <div style="width: 100% !important" class="children content">
-                    @Html.ActionLink("Update Profile", "UpdateProfile", "Patient", new {id = User.Identity.GetUserId()}, new {@class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px"})
+                    @Html.ActionLink("Update Profile", "UpdateProfile", "Patient", new { id = User.Identity.GetUserId() }, new { @class = "list-group-item font-size", @style = "margin: 0px -20px; " })
                 </div>
             </li>
             <li>
-                <button class="collapsible"><em class="fa fa-user-md">&nbsp; &nbsp;</em>Doctors</button>
+                <button class="collapsible font-size"><em class="fa fa-hospital-o">&nbsp; &nbsp;</em>Your Operations</button>
                 <div style="width: 100% !important" class="children content">
-                    @Html.ActionLink("Available Doctors", "AvailableDoctors", "Patient", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
+                    @*@Html.ActionLink("Add Patinet in OT", "AddOperationTheatre", "Patient", null, new { @class = "list-group-item", @style = "margin: 0px -20px; " })*@
+                    @Html.ActionLink("List of OTs", "ListOfOperations", "Patient", null, new { @class = "list-group-item font-size", @style = "margin: 0px -20px; " })
                 </div>
             </li>
             <li>
-                <button class="collapsible"><em class="fa fa-pencil-square-o">&nbsp; &nbsp;</em>Appointment</button>
+                <button  class="collapsible font-size"><em class="fa fa-user-md">&nbsp; &nbsp;</em>Doctors</button>
                 <div style="width: 100% !important" class="children content">
-                    @Html.ActionLink("Request Appointment", "AddAppointment", "Patient", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
-                    @Html.ActionLink("Your Appointments", "ListOfAppointments", "Patient", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
+                    @Html.ActionLink("Available Doctors", "AvailableDoctors", "Patient", null, new { @class = "list-group-item font-size", @style = "margin: 0px -20px; " })
                 </div>
             </li>
             <li>
-                <button class="collapsible"><em class="fa fa-book">&nbsp; &nbsp;</em>Prescription</button>
-                <div style="width: 100% !important" class="children content">
-                    @Html.ActionLink("Your Prescriptions", "ListOfPrescription", "Patient", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
+                <button class="collapsible font-size"><em class="fa fa-pencil-square-o">&nbsp; &nbsp;</em>Appointment</button>
+                <div style="width: 100% !important" class="children content font-size">
+                    @Html.ActionLink("Request Appointment", "AddAppointment", "Patient", null, new { @class = "list-group-item font-size", @style = "margin: 0px -20px; " })
+                    @Html.ActionLink("Your Appointments", "ListOfAppointments", "Patient", null, new { @class = "list-group-item font-size", @style = "margin: 0px -20px; " })
                 </div>
             </li>
             <li>
-                <button class="collapsible"><em class="fa fa-cog">&nbsp; &nbsp;</em>Manage</button>
+                <button class="collapsible font-size"><em class="fa fa-book">&nbsp; &nbsp;</em>Prescription</button>
                 <div style="width: 100% !important" class="children content">
-                    @Html.ActionLink("Change Password", "ChangePassword", "Manage", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
+                    @Html.ActionLink("Your Prescriptions", "ListOfPrescription", "Patient", null, new { @class = "list-group-item font-size", @style = "margin: 0px -20px; " })
+                </div>
+            </li>
+            <li>
+                <button class="collapsible font-size"><em class="fa fa-cog">&nbsp; &nbsp;</em>Manage</button>
+                <div style="width: 100% !important" class="children content">
+                    @Html.ActionLink("Change Password", "ChangePassword", "Manage", null, new { @class = "list-group-item font-size", @style = "margin: 0px -20px; " })
                 </div>
             </li>
             @Html.Partial("_LoginPartial")
         </ul>
     </div><!--/.sidebar-->
 
-    <div class="col-sm-7 col-sm-offset-3 col-lg-10 col-lg-offset-2 ">
+    <div class="col-sm-7 col-sm-offset-3 col-lg-10 col-lg-offset-2 " style="font-size: 12px;">
         @RenderBody()
     </div>	<!--/.main-->
 

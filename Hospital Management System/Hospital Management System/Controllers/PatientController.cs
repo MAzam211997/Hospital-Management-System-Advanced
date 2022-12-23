@@ -294,5 +294,31 @@ namespace Hospital_Management_System.Controllers
         }
 
         //End Prescription Section
+
+        //Detail of Operation
+        [Authorize(Roles = "Patient")]
+        public ActionResult DetailOfOperation(int id)
+        {
+            Patient patient = GetLoggedIUser();
+            var operation = db.OperationTheatre.Include(c => c.MedicalTest).Include(c => c.Doctor).Include(c => c.Patient).Single(c => c.PatientId == id);
+            return View(operation);
+        }
+        //List Of Operations
+        [Authorize(Roles = "Patient")]
+        public ActionResult ListOfOperations()
+        {
+            Patient patient = GetLoggedIUser();
+            var date = DateTime.Now.Date;
+            var operations = db.OperationTheatre.Include(c => c.Doctor).Include(c => c.MedicalTest).Include(c => c.Patient)
+                .Where(c => c.PatientId == patient.Id).ToList();
+            return View(operations);
+        }
+
+        private Patient GetLoggedIUser()
+        {
+            string user = User.Identity.GetUserId();
+            var patient = db.Patients.Single(c => c.ApplicationUserId == user);
+            return patient;
+        }
     }
 }
