@@ -466,6 +466,7 @@ namespace Hospital_Management_System.Controllers
                     EmailAddress = model.ApplicationUser.Email,
                     ContactNo = model.Doctor.ContactNo,
                     PhoneNo = model.Doctor.PhoneNo,
+                    Cnic = model.Doctor.Cnic,
                     Designation = model.Doctor.Designation,
                     Education = model.Doctor.Education,
                     DepartmentId = model.Doctor.DepartmentId,
@@ -521,6 +522,7 @@ namespace Hospital_Management_System.Controllers
                     FullName = model.FirstName + " " + model.LastName,
                     EmailAddress = model.EmailAddress,
                     Contact = model.Contact,
+                    Cnic = model.Cnic,
                     PhoneNo = model.PhoneNo,
                     Gender = model.Gender,
                     BloodGroup = model.BloodGroup,
@@ -575,6 +577,7 @@ namespace Hospital_Management_System.Controllers
             doctor.FullName = "Dr. " + model.Doctor.FirstName + " " + model.Doctor.LastName;
             doctor.ContactNo = model.Doctor.ContactNo;
             doctor.PhoneNo = model.Doctor.PhoneNo;
+            doctor.Cnic = model.Doctor.Cnic;
             doctor.Designation = model.Doctor.Designation;
             doctor.Education = model.Doctor.Education;
             doctor.DepartmentId = model.Doctor.DepartmentId;
@@ -740,6 +743,7 @@ namespace Hospital_Management_System.Controllers
             patient.FullName = model.FirstName + " " + model.LastName;
             patient.Address = model.Address;
             patient.BloodGroup = model.BloodGroup;
+            patient.Cnic = model.Cnic;
             patient.Contact = model.Contact;
             patient.DateOfBirth = model.DateOfBirth;
             patient.EmailAddress = model.EmailAddress;
