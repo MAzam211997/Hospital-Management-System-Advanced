@@ -17,14 +17,18 @@
     </ol>
 </div>
 
-<h2>List Of Patients</h2>
-  &nbsp;
-<a target="_blank" href="~/Reporting/PatientsReport.aspx" class="btn btn-info">View Report</a>
+<h3>List Of Patients</h3>
+<p>
+    @Html.ActionLink("Create New", "AddPatient", null, new { @class = "btn btn-primary" })  
+    &nbsp;
+    <a target="_blank" href="~/Reporting/PatientsReport.aspx" class="btn btn-info">View Report</a>
+</p>
+
 <table id="table_id" class="table ">
     <thead>
         <tr>
             <th>
-               MR No.
+                MR No.
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.FullName)

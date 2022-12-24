@@ -391,5 +391,28 @@ namespace Hospital_Management_System.Controllers
                 return RedirectToAction("PendingAppointments");
             }
         }
+        //Detail of Operation
+        [Authorize(Roles = "Patient")]
+        public ActionResult DetailOfOperation(int id)
+        {
+            var operation = db.OperationTheatre.Include(c => c.MedicalTest).Include(c => c.Doctor).Include(c => c.Patient).Single(c => c.DoctorId == id);
+            return View(operation);
+        }
+        //List Of Operations
+        [Authorize(Roles = "Patient")]
+        public ActionResult ListOfOperations()
+        {
+            Doctor doctor = GetLoggedIUser();
+            var operations = db.OperationTheatre.Include(c => c.Doctor).Include(c => c.MedicalTest).Include(c => c.Patient)
+                .Where(c => c.DoctorId == doctor.Id).ToList();
+            return View(operations);
+        }
+
+        private Doctor GetLoggedIUser()
+        {
+            string user = User.Identity.GetUserId();
+            var doctor = db.Doctors.Single(c => c.ApplicationUserId == user);
+            return doctor;
+        }
     }
 }

@@ -52,7 +52,7 @@
         <div class="divider"></div>
         <ul class="nav menu">
             <li class="active font-size"><a href="@Url.Action("Index", "Doctor")"><em class="fa fa-dashboard">&nbsp;</em> DashBoard</a></li>
-          
+
             <li>
                 <button class="collapsible font-size"><em class="fa fa-book">&nbsp; &nbsp;</em>Prescription</button>
                 <div style="width: 100% !important" class="children content">
@@ -72,6 +72,12 @@
                     @Html.ActionLink("Add Appointment", "AddAppointment", "Doctor", null, new { @class = "list-group-item", @style = "margin: 0px -20px;" })
                     @Html.ActionLink("Active Appointments", "ActiveAppointments", "Doctor", null, new { @class = "list-group-item", @style = "margin: 0px -20px;" })
                     @Html.ActionLink("Pending Appointments", "PendingAppointments", "Doctor", null, new { @class = "list-group-item", @style = "margin: 0px -20px;" })
+                </div>
+            </li>
+            <li>
+                <button class="collapsible font-size"><em class="fa fa-hospital-o">&nbsp; &nbsp;</em>Your Operations</button>
+                <div style="width: 100% !important" class="children content">
+                    @Html.ActionLink("List of OTs", "ListOfOperations", "Doctor", null, new { @class = "list-group-item font-size", @style = "margin: 0px -20px; " })
                 </div>
             </li>
             <li>

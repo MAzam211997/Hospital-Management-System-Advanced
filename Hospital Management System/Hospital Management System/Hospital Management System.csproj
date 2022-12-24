@@ -921,6 +921,8 @@
     <Content Include="Views\Admin\DetailOfOperationTheatre.cshtml" />
     <Content Include="Views\Patient\DetailOfOperation.cshtml" />
     <Content Include="Views\Patient\ListOfOperations.cshtml" />
+    <Content Include="Views\Doctor\ListOfOperations.cshtml" />
+    <Content Include="Views\Doctor\DetailOfOperation.cshtml" />
     <None Include="_aspnet_Hospital_Management_System_20181110095545DataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>_aspnet_Hospital_Management_System_20181110095545DataSet.Designer.cs</LastGenOutput>

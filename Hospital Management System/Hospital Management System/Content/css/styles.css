@@ -1,9 +1,10 @@
 body {
-  background: #f1f4f7;
-  padding-top: 60px;
-  font-size: 14px;
-  color: #444444;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
+    background: #f1f4f7;
+    padding-top: 40px;
+    font-size: 14px;
+    color: #444444;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
 
 .form-control {
     width: 50% !important;
@@ -31,7 +32,9 @@ h1 {
 
 h2 {
   font-weight: 300;
-  margin-bottom: 20px; }
+/*  margin-bottom: 20px; */
+
+}
 
 h3, h4 {
   font-weight: 300; }
@@ -91,7 +94,7 @@ input.form-control {
 
 .navbar-custom {
   background: #222;
-  height: 60px; }
+  height: 30px; }
 
 .navbar-brand {
   color: #fff;
