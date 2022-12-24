@@ -218,6 +218,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="MedicalTestDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalTestDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201811101658245_initialModel.cs" />
     <Compile Include="Migrations\201811101658245_initialModel.Designer.cs">
       <DependentUpon>201811101658245_initialModel.cs</DependentUpon>
@@ -455,6 +460,13 @@
     <Compile Include="Reporting\AppointmentsReport.aspx.designer.cs">
       <DependentUpon>AppointmentsReport.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Reporting\MedicalTestReport.aspx.cs">
+      <DependentUpon>MedicalTestReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\MedicalTestReport.aspx.designer.cs">
+      <DependentUpon>MedicalTestReport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Reporting\PatientsReport.aspx.cs">
       <DependentUpon>PatientsReport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -468,6 +480,27 @@
     </Compile>
     <Compile Include="Reporting\DoctorsReport.aspx.designer.cs">
       <DependentUpon>DoctorsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\PerDoctorReport.aspx.cs">
+      <DependentUpon>PerDoctorReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\PerDoctorReport.aspx.designer.cs">
+      <DependentUpon>PerDoctorReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\PerMedicalTestReport.aspx.cs">
+      <DependentUpon>PerMedicalTestReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\PerMedicalTestReport.aspx.designer.cs">
+      <DependentUpon>PerMedicalTestReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\PerPatientReport.aspx.cs">
+      <DependentUpon>PerPatientReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\PerPatientReport.aspx.designer.cs">
+      <DependentUpon>PerPatientReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Reporting\ScheduleReport.aspx.cs">
       <DependentUpon>ScheduleReport.aspx</DependentUpon>
@@ -660,8 +693,12 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Reporting\AppointmentsReport.aspx" />
+    <Content Include="Reporting\MedicalTestReport.aspx" />
     <Content Include="Reporting\PatientsReport.aspx" />
     <Content Include="Reporting\DoctorsReport.aspx" />
+    <Content Include="Reporting\PerDoctorReport.aspx" />
+    <Content Include="Reporting\PerMedicalTestReport.aspx" />
+    <Content Include="Reporting\PerPatientReport.aspx" />
     <Content Include="Reporting\ScheduleReport.aspx" />
     <Content Include="Scripts\bootbox.js" />
     <Content Include="Scripts\bootbox.min.js" />
@@ -703,6 +740,17 @@
     </None>
     <Content Include="AppointmentsDataSet.xss">
       <DependentUpon>AppointmentsDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="MedicalTestDataSet.xsc">
+      <DependentUpon>MedicalTestDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="MedicalTestDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedicalTestDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="MedicalTestDataSet.xss">
+      <DependentUpon>MedicalTestDataSet.xsd</DependentUpon>
     </Content>
     <None Include="PatientsDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
@@ -1102,6 +1150,7 @@
       <DependentUpon>202212241126299_Added_Cnics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reporting\AppointmentsReport.rdlc" />
+    <EmbeddedResource Include="Reporting\DataSets\MedicalTestReport.rdlc" />
     <EmbeddedResource Include="Reporting\DataSets\PatientsReport.rdlc" />
     <EmbeddedResource Include="Reporting\DataSets\ScheduleReport.rdlc" />
     <EmbeddedResource Include="Reporting\Report1.rdlc" />
