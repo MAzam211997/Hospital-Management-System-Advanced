@@ -28,6 +28,8 @@ namespace Hospital_Management_System.Models
         public string EmailAddress { get; set; }
         [Display(Name = "Phone No")]
         public string PhoneNo { get; set; }
+        [Display(Name = "Cnic No")]
+        public string Cnic { get; set; }
         public string Contact { get; set; }
         [Display(Name = "Blood Group")]
         public string BloodGroup { get; set; }

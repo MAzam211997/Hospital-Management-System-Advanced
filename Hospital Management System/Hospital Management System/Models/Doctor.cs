@@ -37,6 +37,8 @@ namespace Hospital_Management_System.Models
         public string Address { get; set; }
         [Display(Name = "Phone No")]
         public string PhoneNo { get; set; }
+        [Display(Name = "Cnic No")]
+        public string Cnic { get; set; }
 
         [Required]
         [Display(Name = "Mobile No")]
