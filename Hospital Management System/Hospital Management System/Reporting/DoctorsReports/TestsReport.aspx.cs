@@ -13,6 +13,22 @@ namespace Hospital_Management_System.Reporting.DoctorsReports
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                ReportViewerTestsReport.ProcessingMode = ProcessingMode.Local;
+                ReportViewerTestsReport.InternalBorderStyle = BorderStyle.Solid;
+                ReportViewerTestsReport.InternalBorderStyle = BorderStyle.Solid;
+                ReportViewerTestsReport.ToolBarItemBorderStyle = BorderStyle.Solid;
+                ReportViewerTestsReport.ProcessingMode = ProcessingMode.Local;
+                ReportViewerTestsReport.LocalReport.ReportPath = Server.MapPath("AppointmentsReport.rdlc");
+                var entities = new ApplicationDbContext();
+                ReportDataSource datasource = new ReportDataSource("AppointmentsDataSet", (from doctor in entities.Doctors
+                                                                                           select doctor));
+                ReportViewerTestsReport.LocalReport.DataSources.Clear();
+                ReportViewerTestsReport.BorderStyle = BorderStyle.Solid;
+                ReportViewerTestsReport.LocalReport.DataSources.Add(datasource);
+
+            }
 
         }
     }

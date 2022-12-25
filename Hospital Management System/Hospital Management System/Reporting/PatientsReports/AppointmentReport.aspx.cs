@@ -16,14 +16,19 @@ namespace Hospital_Management_System.Reporting.PatientsReports
 
             if (!IsPostBack)
             {
-                ReportViewer1.ProcessingMode = ProcessingMode.Local;
-                ReportViewer1.LocalReport.ReportPath = Server.MapPath("Report1.rdlc");
+                ReportViewerTestsReport.ProcessingMode = ProcessingMode.Local;
+                ReportViewerTestsReport.InternalBorderStyle = BorderStyle.Solid;
+                ReportViewerTestsReport.InternalBorderStyle = BorderStyle.Solid;
+                ReportViewerTestsReport.ToolBarItemBorderStyle = BorderStyle.Solid;
+                ReportViewerTestsReport.ProcessingMode = ProcessingMode.Local;
+                ReportViewerAppointmentReport.ProcessingMode = ProcessingMode.Local;
+                ReportViewerAppointmentReport.LocalReport.ReportPath = Server.MapPath("Report1.rdlc");
                 var entities = new ApplicationDbContext();
                 ReportDataSource datasource = new ReportDataSource("Doctors", (from doctor in entities.Doctors
                                                                                select doctor));
-                ReportViewer1.LocalReport.DataSources.Clear();
-                ReportViewer1.BorderStyle = BorderStyle.Solid;
-                ReportViewer1.LocalReport.DataSources.Add(datasource);
+                ReportViewerAppointmentReport.LocalReport.DataSources.Clear();
+                ReportViewerAppointmentReport.BorderStyle = BorderStyle.Solid;
+                ReportViewerAppointmentReport.LocalReport.DataSources.Add(datasource);
 
             }
         }
