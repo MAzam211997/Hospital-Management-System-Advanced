@@ -5977,13 +5977,29 @@ namespace Hospital_Management_System.MedicalTestDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Id, ApplicationUserId, FirstName, LastName, EmailAddress, Designation, Dep" +
                 "artmentId, Address, PhoneNo, ContactNo, Specialization, Gender, BloodGroup, Date" +
                 "OfBirth, Education, FullName, Status, Cnic FROM dbo.Doctors";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        OperationTheatres.Id, OperationTheatres.PatientId, OperationTheatres.DoctorId, OperationTheatres.MedicalTestId, OperationTheatres.OperationDate, OperationTheatres.Problem, OperationTheatres.Status, 
+                         OperationTheatres.AppointmentId, Appointments.Id AS Expr1, Appointments.PatientId AS Expr2, Appointments.DoctorId AS Expr3, Appointments.AppointmentDate, Appointments.Problem AS Expr4, 
+                         Appointments.Status AS Expr5
+FROM            OperationTheatres INNER JOIN
+                         Appointments ON Appointments.Id = OperationTheatres.AppointmentId";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"SELECT        OperationTheatres.Id, OperationTheatres.PatientId, OperationTheatres.DoctorId, OperationTheatres.MedicalTestId, OperationTheatres.OperationDate, OperationTheatres.Problem, OperationTheatres.Status, 
+                         OperationTheatres.AppointmentId, Appointments.Id AS Expr1, Appointments.PatientId AS Expr2, Appointments.DoctorId AS Expr3, Appointments.AppointmentDate, Appointments.Problem AS Expr4, 
+                         Appointments.Status AS Expr5
+FROM            OperationTheatres INNER JOIN
+                         Appointments ON Appointments.Id = OperationTheatres.AppointmentId";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6005,6 +6021,54 @@ namespace Hospital_Management_System.MedicalTestDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual MedicalTestDataSet.DoctorsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            MedicalTestDataSet.DoctorsDataTable dataTable = new MedicalTestDataSet.DoctorsDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(MedicalTestDataSet.DoctorsDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual MedicalTestDataSet.DoctorsDataTable GetDataBy() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            MedicalTestDataSet.DoctorsDataTable dataTable = new MedicalTestDataSet.DoctorsDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy1(MedicalTestDataSet.DoctorsDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual MedicalTestDataSet.DoctorsDataTable GetDataBy1() {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             MedicalTestDataSet.DoctorsDataTable dataTable = new MedicalTestDataSet.DoctorsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

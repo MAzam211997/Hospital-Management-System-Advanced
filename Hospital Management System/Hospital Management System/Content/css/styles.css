@@ -1,7 +1,7 @@
 body {
     background: #f1f4f7;
-    padding-top: 40px;
-    font-size: 14px;
+    padding-top: 45px;
+    font-size: 12px;
     color: #444444;
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
@@ -68,9 +68,10 @@ h3, h4 {
   font-size: 2em; }
 
 input.form-control {
-  border: 1px solid #ddd;
-  box-shadow: none;
-  height: 46px; }
+    border: 1px solid #ddd;
+    box-shadow: none;
+    height: 30px;
+}
 
 .bootstrap-table input.form-control {
   height: 34px; }
@@ -93,8 +94,9 @@ input.form-control {
   border: 1px solid #f9243f; }
 
 .navbar-custom {
-  background: #222;
-  height: 30px; }
+    background: #222;
+    height: 30px;
+}
 
 .navbar-brand {
   color: #fff;
@@ -775,25 +777,28 @@ a.label:hover, a.label:focus {
   background: #fff; }
 
 .sidebar ul {
-  margin: 20px 0px; }
+/*  margin: 20px 0px; */
+
+}
 
 .sidebar form {
   padding: 10px 0 0 0;
   margin: 10px 10px 20px 10px; }
 
 @media (min-width: 768px) {
-  .sidebar {
-    display: block;
-    position: fixed;
-    top: 60px;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    display: block;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    overflow-y: auto; }
+    .sidebar {
+        display: block;
+        position: fixed;
+        top: 50px;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
 
   .navbar-header {
     width: auto; } }
@@ -811,9 +816,9 @@ a.label:hover, a.label:focus {
   list-style-type: none; }
 
 .sidebar ul.nav li a {
-  height: 50px;
-  font-size: 15px;
-  line-height: 2em;
+/*  height: 50px;*/
+  font-size: 12px;
+  line-height: 1em;
   color: #444444; }
 
 .sidebar ul.nav ul.children {
@@ -1052,7 +1057,7 @@ p.back-link {
     background-color: white;
     color: #444444;
     cursor: pointer;
-    padding: 14px;
+    padding: 8px;
     border: none;
     width: 100%;
     text-align: left;

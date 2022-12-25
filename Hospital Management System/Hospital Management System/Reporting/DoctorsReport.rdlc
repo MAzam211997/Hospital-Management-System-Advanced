@@ -417,10 +417,15 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
+        <RepeatColumnHeaders>true</RepeatColumnHeaders>
+        <RepeatRowHeaders>true</RepeatRowHeaders>
+        <FixedColumnHeaders>true</FixedColumnHeaders>
+        <FixedRowHeaders>true</FixedRowHeaders>
         <DataSetName>DataSet1</DataSetName>
         <Top>0.28787cm</Top>
         <Height>1.2cm</Height>
-        <Width>27.23792cm</Width>
+        <Width>27.23793cm</Width>
+        <ToolTip>=RowNumber("Tablix1")</ToolTip>
         <Style>
           <Border>
             <Style>None</Style>
@@ -429,7 +434,29 @@
       </Tablix>
     </ReportItems>
     <Height>2in</Height>
-    <Style />
+    <Style>
+      <Border>
+        <Style>Solid</Style>
+        <Width>0.5pt</Width>
+      </Border>
+      <TopBorder>
+        <Style>Solid</Style>
+        <Width>0.5pt</Width>
+      </TopBorder>
+      <BottomBorder>
+        <Style>Solid</Style>
+        <Width>0.5pt</Width>
+      </BottomBorder>
+      <LeftBorder>
+        <Style>Solid</Style>
+        <Width>0.5pt</Width>
+      </LeftBorder>
+      <RightBorder>
+        <Style>Solid</Style>
+        <Width>0.5pt</Width>
+      </RightBorder>
+      <BackgroundColor>LightBlue</BackgroundColor>
+    </Style>
   </Body>
   <Width>11.23425in</Width>
   <Page>

@@ -21,6 +21,7 @@ namespace Hospital_Management_System.Reporting
                 ReportDataSource datasource = new ReportDataSource("Doctors", (from doctor in entities.Doctors.Take(10)
                                                                                select doctor));
                 ReportViewer1.LocalReport.DataSources.Clear();
+                ReportViewer1.BorderStyle = BorderStyle.Solid;
                 ReportViewer1.LocalReport.DataSources.Add(datasource);
 
             }

@@ -72,7 +72,9 @@
                 </td>
                 <td>
                     <a href="@Url.Action("EditPatient", new {id = item.Id})" class="fa fa-pencil-square-o" style="font-size: 19px"></a> |
-                    <a href="@Url.Action("DeletePatient", new {id = item.ApplicationUserId})" class="fa fa-trash" style="font-size: 19px; color: red"></a>
+                    <a href="@Url.Action("DeletePatient", new {id = item.ApplicationUserId})" class="fa fa-trash" style="font-size: 19px; color: red"></a> |
+                    <a target="_blank" href="~/Reporting/PerPatientReport.aspx" class="btn btn-info">View Report</a>
+
                 </td>
             </tr>
         }

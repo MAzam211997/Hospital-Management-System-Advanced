@@ -56,34 +56,34 @@
             <li>
                 <button class="collapsible font-size"><em class="fa fa-book">&nbsp; &nbsp;</em>Prescription</button>
                 <div style="width: 100% !important" class="children content">
-                    @Html.ActionLink("Add Prescription", "AddPrescription", "Doctor", null, new { @class = "list-group-item", @style = "margin: 0px -20px;" })
-                    @Html.ActionLink("List of Prescriptions", "ListOfPrescription", "Doctor", null, new { @class = "list-group-item", @style = "margin: 0px -20px;" })
+                    @Html.ActionLink("Add Prescription", "AddPrescription", "Doctor", null, new { @class = "list-group-item", @style = "margin: 0px -20px;  background-color: aliceblue;   color:black;  padding-left: 40px;" })
+                    @Html.ActionLink("List of Prescriptions", "ListOfPrescription", "Doctor", null, new { @class = "list-group-item", @style = "margin: 0px -20px;  background-color: aliceblue;   color:black;  padding-left: 40px;" })
                 </div>
             </li>
             <li>
                 <button class="collapsible font-size"><em class="fa fa-calendar-check-o">&nbsp; &nbsp;</em>Schedule</button>
                 <div style="width: 100% !important" class="children content">
-                    @Html.ActionLink("Your Schedule", "ScheduleDetail", "Doctor", null, new { @class = "list-group-item", @style = "margin: 0px -20px;" })
+                    @Html.ActionLink("Your Schedule", "ScheduleDetail", "Doctor", null, new { @class = "list-group-item", @style = "margin: 0px -20px;  background-color: aliceblue;   color:black;  padding-left: 40px;" })
                 </div>
             </li>
             <li>
                 <button class="collapsible font-size"><em class="fa fa-pencil-square-o">&nbsp; &nbsp;</em>Appointment</button>
                 <div style="width: 100% !important" class="children content">
-                    @Html.ActionLink("Add Appointment", "AddAppointment", "Doctor", null, new { @class = "list-group-item", @style = "margin: 0px -20px;" })
-                    @Html.ActionLink("Active Appointments", "ActiveAppointments", "Doctor", null, new { @class = "list-group-item", @style = "margin: 0px -20px;" })
-                    @Html.ActionLink("Pending Appointments", "PendingAppointments", "Doctor", null, new { @class = "list-group-item", @style = "margin: 0px -20px;" })
+                    @Html.ActionLink("Add Appointment", "AddAppointment", "Doctor", null, new { @class = "list-group-item", @style = "margin: 0px -20px;  background-color: aliceblue;   color:black;  padding-left: 40px;" })
+                    @Html.ActionLink("Active Appointments", "ActiveAppointments", "Doctor", null, new { @class = "list-group-item", @style = "margin: 0px -20px;  background-color: aliceblue;   color:black;  padding-left: 40px;" })
+                    @Html.ActionLink("Pending Appointments", "PendingAppointments", "Doctor", null, new { @class = "list-group-item", @style = "margin: 0px -20px;  background-color: aliceblue;   color:black;  padding-left: 40px;" })
                 </div>
             </li>
             <li>
                 <button class="collapsible font-size"><em class="fa fa-hospital-o">&nbsp; &nbsp;</em>Your Operations</button>
                 <div style="width: 100% !important" class="children content">
-                    @Html.ActionLink("List of OTs", "ListOfOperations", "Doctor", null, new { @class = "list-group-item font-size", @style = "margin: 0px -20px; " })
+                    @Html.ActionLink("List of OTs", "ListOfOperations", "Doctor", null, new { @class = "list-group-item font-size", @style = "margin: 0px -20px;  background-color: aliceblue;   color:black;  padding-left: 40px; " })
                 </div>
             </li>
             <li>
                 <button class="collapsible font-size"><em class="fa fa-cog">&nbsp; &nbsp;</em>Manage</button>
                 <div style="width: 100% !important" class="children content">
-                    @Html.ActionLink("Change Password", "ChangePassword", "Manage", null, new { @class = "list-group-item", @style = "margin: 0px -20px;" })
+                    @Html.ActionLink("Change Password", "ChangePassword", "Manage", null, new { @class = "list-group-item", @style = "margin: 0px -20px;  background-color: aliceblue;   color:black;  padding-left: 40px;" })
                 </div>
             </li>
             @Html.Partial("_LoginPartial")
