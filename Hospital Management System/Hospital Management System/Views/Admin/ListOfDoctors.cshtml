@@ -81,7 +81,10 @@
                 <td>
                     <a href="@Url.Action("EditDoctors", new {id = item.Id})" class="fa fa-pencil-square-o" style="font-size: 19px"></a> |
                     <a href="@Url.Action("DoctorDetail", new {id = item.Id})" class="fa fa-info-circle" style="font-size: 19px; color: lightblue"></a> |
-                    <a href="@Url.Action("DeleteDoctor", new {id = item.ApplicationUserId})" class="fa fa-trash" style="font-size: 19px; color: red"></a>
+                    <a href="@Url.Action("DeleteDoctor", new {id = item.ApplicationUserId})" class="fa fa-trash" style="font-size: 19px; color: red"></a> |
+                    <a target="_blank" href="~/Reporting/PerDoctorReport.aspx?id=@item.Id" class="fa fa-file" style="font-size: 19px; color: green"></a>
+                    @*<a target="_blank" href="~/Reporting/PerPatientReport.aspx?id=@item.Id" class="btn btn-info">View Report</a>*@
+
                 </td>
             </tr>
         }

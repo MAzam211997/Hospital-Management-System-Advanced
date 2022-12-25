@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hospital_Management_System.Reporting
+namespace Hospital_Management_System.Reporting.PatientsReports
 {
 
 
-    public partial class MedicalTestReport
+    public partial class OperationReport
     {
 
         /// <summary>
@@ -24,21 +24,21 @@ namespace Hospital_Management_System.Reporting
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// ScriptManager_MedicalTestReport control.
+        /// ScriptManagerOperationReport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager_MedicalTestReport;
+        protected global::System.Web.UI.ScriptManager ScriptManagerOperationReport;
 
         /// <summary>
-        /// ReportViewer_MedicalTestReport control.
+        /// ReportViewerOperationReport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Microsoft.Reporting.WebForms.ReportViewer ReportViewer_MedicalTestReport;
+        protected global::Microsoft.Reporting.WebForms.ReportViewer ReportViewerOperationReport;
     }
 }

@@ -460,6 +460,55 @@
     <Compile Include="Reporting\AppointmentsReport.aspx.designer.cs">
       <DependentUpon>AppointmentsReport.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Reporting\DoctorsReports\AppointmentsReport.aspx.cs">
+      <DependentUpon>AppointmentsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\DoctorsReports\AppointmentsReport.aspx.designer.cs">
+      <DependentUpon>AppointmentsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\DoctorsReports\OperationsReport.aspx.cs">
+      <DependentUpon>OperationsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\DoctorsReports\OperationsReport.aspx.designer.cs">
+      <DependentUpon>OperationsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\DoctorsReports\PatientsReport.aspx.cs">
+      <DependentUpon>PatientsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\DoctorsReports\PatientsReport.aspx.designer.cs">
+      <DependentUpon>PatientsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\DoctorsReports\PerAppointmentReport.aspx.cs">
+      <DependentUpon>PerAppointmentReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\DoctorsReports\PerAppointmentReport.aspx.designer.cs">
+      <DependentUpon>PerAppointmentReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\DoctorsReports\PerPatientReport.aspx.cs">
+      <DependentUpon>PerPatientReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\DoctorsReports\PerPatientReport.aspx.designer.cs">
+      <DependentUpon>PerPatientReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\DoctorsReports\PerTestReport.aspx.cs">
+      <DependentUpon>PerTestReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\DoctorsReports\PerTestReport.aspx.designer.cs">
+      <DependentUpon>PerTestReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\DoctorsReports\TestsReport.aspx.cs">
+      <DependentUpon>TestsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\DoctorsReports\TestsReport.aspx.designer.cs">
+      <DependentUpon>TestsReport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Reporting\MedicalTestReport.aspx.cs">
       <DependentUpon>MedicalTestReport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -480,6 +529,27 @@
     </Compile>
     <Compile Include="Reporting\DoctorsReport.aspx.designer.cs">
       <DependentUpon>DoctorsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\PatientsReports\AppointmentReport.aspx.cs">
+      <DependentUpon>AppointmentReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\PatientsReports\AppointmentReport.aspx.designer.cs">
+      <DependentUpon>AppointmentReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\PatientsReports\OperationReport.aspx.cs">
+      <DependentUpon>OperationReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\PatientsReports\OperationReport.aspx.designer.cs">
+      <DependentUpon>OperationReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\PatientsReports\TestReport.aspx.cs">
+      <DependentUpon>TestReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\PatientsReports\TestReport.aspx.designer.cs">
+      <DependentUpon>TestReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Reporting\PerDoctorReport.aspx.cs">
       <DependentUpon>PerDoctorReport.aspx</DependentUpon>
@@ -515,6 +585,13 @@
       <DependentUpon>ScheduleDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="Views\Doctor\PerOperationReport.aspx.cs">
+      <DependentUpon>PerOperationReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Doctor\PerOperationReport.aspx.designer.cs">
+      <DependentUpon>PerOperationReport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="_aspnet_Hospital_Management_System_20181110095545DataSet.cs">
       <DependentUpon>_aspnet_Hospital_Management_System_20181110095545DataSet.xsd</DependentUpon>
     </Compile>
@@ -693,9 +770,19 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Reporting\AppointmentsReport.aspx" />
+    <Content Include="Reporting\DoctorsReports\AppointmentsReport.aspx" />
+    <Content Include="Reporting\DoctorsReports\OperationsReport.aspx" />
+    <Content Include="Reporting\DoctorsReports\PatientsReport.aspx" />
+    <Content Include="Reporting\DoctorsReports\PerAppointmentReport.aspx" />
+    <Content Include="Reporting\DoctorsReports\PerPatientReport.aspx" />
+    <Content Include="Reporting\DoctorsReports\PerTestReport.aspx" />
+    <Content Include="Reporting\DoctorsReports\TestsReport.aspx" />
     <Content Include="Reporting\MedicalTestReport.aspx" />
     <Content Include="Reporting\PatientsReport.aspx" />
     <Content Include="Reporting\DoctorsReport.aspx" />
+    <Content Include="Reporting\PatientsReports\AppointmentReport.aspx" />
+    <Content Include="Reporting\PatientsReports\OperationReport.aspx" />
+    <Content Include="Reporting\PatientsReports\TestReport.aspx" />
     <Content Include="Reporting\PerDoctorReport.aspx" />
     <Content Include="Reporting\PerMedicalTestReport.aspx" />
     <Content Include="Reporting\PerPatientReport.aspx" />
@@ -850,6 +937,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Doctor\PerOperationReport.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -986,6 +1074,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Layout\resources\data\" />
+    <Folder Include="Reporting\DoctorsReports\DataSets\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

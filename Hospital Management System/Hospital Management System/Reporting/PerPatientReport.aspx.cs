@@ -23,22 +23,23 @@ namespace Hospital_Management_System.Reporting
                 ReportViewer_PerPatientReport.InternalBorderStyle = BorderStyle.Solid;
                 ReportViewer_PerPatientReport.InternalBorderStyle = BorderStyle.Solid;
                 ReportViewer_PerPatientReport.ToolBarItemBorderStyle = BorderStyle.Solid;
-                ReportViewer_PerPatientReport.LocalReport.ReportPath = Server.MapPath("DataSets/PatientsReport.rdlc");
-                DataSet dataSet = new DataSet();
-                string _strCon = ConfigurationManager.ConnectionStrings["aspnet_Hospital_Management_System_20181110095545ConnectionString"].ConnectionString;
+                ReportViewer_PerPatientReport.LocalReport.ReportPath = Server.MapPath("DataSets/MedicalTestReport.rdlc");
+                //DataSet dataSet = new DataSet();
+                //string _strCon = ConfigurationManager.ConnectionStrings["aspnet_Hospital_Management_System_20181110095545ConnectionString"].ConnectionString;
+                //SqlConnection _con = new SqlConnection(_strCon);
+                //string query = "SELECT * FROM Patients Where Id ="+ id;
+                //SqlDataAdapter _adp = new SqlDataAdapter(query, _con);
+                //DataTable tbl1 = new DataTable();
+                //_adp.Fill(tbl1);
+                //dataSet.Tables.Add(tbl1);
                 int id = Convert.ToInt32(Request.QueryString["id"]);
-                SqlConnection _con = new SqlConnection(_strCon);
-                string query = "SELECT * FROM Patients Where Id ="+ id;
-                SqlDataAdapter _adp = new SqlDataAdapter(query, _con);
-                DataTable tbl1 = new DataTable();
-                _adp.Fill(tbl1);
-                dataSet.Tables.Add(tbl1);
                 var entities = new ApplicationDbContext();
-                ReportDataSource datasource = new ReportDataSource("PatientsDataSet", (from patients in entities.Patients where patients.Id.Equals(id)
+                ReportDataSource datasource = new ReportDataSource("MedicalTestDataSet", (from patients in entities.Patients where patients.Id.Equals(id)
                                                                                        select patients));
-                ReportDataSource rds = new ReportDataSource("PatientsDataSet", query);
+                ///ReportDataSource rds = new ReportDataSource("PatientsDataSet", query);
                 ReportViewer_PerPatientReport.LocalReport.DataSources.Clear();
                 ReportViewer_PerPatientReport.LocalReport.DataSources.Add(datasource);
+                ReportViewer_PerPatientReport.DataBind();
                 ReportViewer_PerPatientReport.LocalReport.Refresh();
 
             }

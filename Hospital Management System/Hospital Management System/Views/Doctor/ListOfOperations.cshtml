@@ -19,7 +19,9 @@
 
 <h3>List Of Operations</h3>
 
-
+<p>
+   <a target="_blank" href="~/Reporting/DoctorsReports/OperationsReport.aspx" class="btn btn-info">View Report</a>
+</p>
 <table id="table_id" class="table table-sm">
     <thead>
         <tr>
@@ -61,7 +63,9 @@
                     @Html.DisplayFor(modelItem => item.Status)
                 </td>
                 <td>
-                    <a href="@Url.Action("DetailOfOperation", new {id = item.DoctorId})" class="fa fa-info-circle" style="font-size: 19px; color: lightblue"></a> 
+                    <a href="@Url.Action("DetailOfOperation", new {id = item.DoctorId})" class="fa fa-info-circle" style="font-size: 19px; color: lightblue"></a>  |
+                    <a target="_blank" href="~/Reporting/DoctorsReports/PerOperationReport.aspx?id=@item.DoctorId" class="fa fa-file" style="font-size: 19px; color: green"></a>
+                    @*<a target="_blank" href="~/Reporting/PerPatientReport.aspx?id=@item.Id" class="btn btn-info">View Report</a>*@
                 </td>
             </tr>
         }

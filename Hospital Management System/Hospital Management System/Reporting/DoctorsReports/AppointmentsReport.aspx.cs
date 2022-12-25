@@ -7,9 +7,9 @@ using System.Web.UI.WebControls;
 using Hospital_Management_System.Models;
 using Microsoft.Reporting.WebForms;
 
-namespace Hospital_Management_System.Reporting
+namespace Hospital_Management_System.Reporting.DoctorsReports
 {
-    public partial class DoctorsReport : System.Web.UI.Page
+    public partial class AppointmentsReport : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
