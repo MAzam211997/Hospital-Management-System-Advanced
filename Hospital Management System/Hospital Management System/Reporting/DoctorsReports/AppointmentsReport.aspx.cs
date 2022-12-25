@@ -15,19 +15,19 @@ namespace Hospital_Management_System.Reporting.DoctorsReports
         {
             if (!IsPostBack)
             {
-                ScriptManagerAppointmentsReport.ProcessingMode = ProcessingMode.Local;
-                ScriptManagerAppointmentsReport.InternalBorderStyle = BorderStyle.Solid;
-                ScriptManagerAppointmentsReport.InternalBorderStyle = BorderStyle.Solid;
-                ScriptManagerAppointmentsReport.ToolBarItemBorderStyle = BorderStyle.Solid;
-                ScriptManagerAppointmentsReport.ProcessingMode = ProcessingMode.Local;
-                ScriptManagerAppointmentsReport.LocalReport.ReportPath = Server.MapPath("AppointmentsReport.rdlc");
+                ReportViewerAppointmentsReport.ProcessingMode = ProcessingMode.Local;
+                ReportViewerAppointmentsReport.InternalBorderStyle = BorderStyle.Solid;
+                ReportViewerAppointmentsReport.InternalBorderStyle = BorderStyle.Solid;
+                ReportViewerAppointmentsReport.ToolBarItemBorderStyle = BorderStyle.Solid;
+                ReportViewerAppointmentsReport.ProcessingMode = ProcessingMode.Local;
+                ReportViewerAppointmentsReport.LocalReport.ReportPath = Server.MapPath("~/Reporting/AppointmentsReport.rdlc");
                 var entities = new ApplicationDbContext();
-                ReportDataSource datasource = new ReportDataSource("AppointmentsDataSet", (from doctor in entities.Doctors
-                                                                               select doctor));
-                ScriptManagerAppointmentsReport.LocalReport.DataSources.Clear();
-                ScriptManagerAppointmentsReport.BorderStyle = BorderStyle.Solid;
-                ScriptManagerAppointmentsReport.LocalReport.DataSources.Add(datasource);
-
+                int id = Convert.ToInt32(Request.QueryString["id"]);
+                ReportDataSource datasource = new ReportDataSource("AppointmentsDataSet", (from app in entities.Appointments where app.DoctorId.Equals(id)
+                                                                               select app));
+                ReportViewerAppointmentsReport.LocalReport.DataSources.Clear();
+                ReportViewerAppointmentsReport.BorderStyle = BorderStyle.Solid;
+                ReportViewerAppointmentsReport.LocalReport.DataSources.Add(datasource);
             }
         }
     }

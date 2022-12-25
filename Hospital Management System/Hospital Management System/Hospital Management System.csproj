@@ -585,11 +585,11 @@
       <DependentUpon>ScheduleDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="Views\Doctor\PerOperationReport.aspx.cs">
+    <Compile Include="Reporting\DoctorsReports\PerOperationReport.aspx.cs">
       <DependentUpon>PerOperationReport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Doctor\PerOperationReport.aspx.designer.cs">
+    <Compile Include="Reporting\DoctorsReports\PerOperationReport.aspx.designer.cs">
       <DependentUpon>PerOperationReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="_aspnet_Hospital_Management_System_20181110095545DataSet.cs">
@@ -937,7 +937,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Views\Doctor\PerOperationReport.aspx" />
+    <Content Include="Reporting\DoctorsReports\PerOperationReport.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1063,6 +1063,7 @@
     <Content Include="Views\Patient\ListOfOperations.cshtml" />
     <Content Include="Views\Doctor\ListOfOperations.cshtml" />
     <Content Include="Views\Doctor\DetailOfOperation.cshtml" />
+    <Content Include="Views\Doctor\LaboratoryTestList.cshtml" />
     <None Include="_aspnet_Hospital_Management_System_20181110095545DataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>_aspnet_Hospital_Management_System_20181110095545DataSet.Designer.cs</LastGenOutput>

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Hospital_Management_System.Views.Doctor
+namespace Hospital_Management_System.Reporting.DoctorsReports
 {
     public partial class PerOperationReport : System.Web.UI.Page
     {

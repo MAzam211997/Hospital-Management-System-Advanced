@@ -302,6 +302,7 @@ namespace Hospital_Management_System.Controllers
             var user = User.Identity.GetUserId();
             var doctor = db.Doctors.Single(c => c.ApplicationUserId == user);
             var date = DateTime.Now.Date;
+            ViewBag.DoctorId = doctor.Id;
             var appointment = db.Appointments.Include(c => c.Doctor).Include(c => c.Patient).Where(c => c.DoctorId == doctor.Id).Where(c => c.Status == true).Where(c => c.AppointmentDate >= date).ToList();
             return View(appointment);
         }
@@ -392,14 +393,14 @@ namespace Hospital_Management_System.Controllers
             }
         }
         //Detail of Operation
-        [Authorize(Roles = "Patient")]
+        [Authorize(Roles = "Doctor")]
         public ActionResult DetailOfOperation(int id)
         {
             var operation = db.OperationTheatre.Include(c => c.MedicalTest).Include(c => c.Doctor).Include(c => c.Patient).Single(c => c.DoctorId == id);
             return View(operation);
         }
         //List Of Operations
-        [Authorize(Roles = "Patient")]
+        [Authorize(Roles = "Doctor")]
         public ActionResult ListOfOperations()
         {
             Doctor doctor = GetLoggedIUser();
@@ -408,6 +409,14 @@ namespace Hospital_Management_System.Controllers
             return View(operations);
         }
 
+        //Laboratory Test List
+        [Authorize(Roles = "Doctor")]
+        public ActionResult LaboratoryTestList()
+        {
+            Doctor doctor = GetLoggedIUser();
+            var model = db.OperationTheatre.Include(x=>x.Doctor).Where(x=>x.DoctorId == doctor.Id).Select(x=>x.MedicalTest).ToList();
+            return View(model);
+        }
         private Doctor GetLoggedIUser()
         {
             string user = User.Identity.GetUserId();

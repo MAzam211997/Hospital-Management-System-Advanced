@@ -16,11 +16,11 @@ namespace Hospital_Management_System.Reporting.PatientsReports
 
             if (!IsPostBack)
             {
-                ReportViewerTestsReport.ProcessingMode = ProcessingMode.Local;
-                ReportViewerTestsReport.InternalBorderStyle = BorderStyle.Solid;
-                ReportViewerTestsReport.InternalBorderStyle = BorderStyle.Solid;
-                ReportViewerTestsReport.ToolBarItemBorderStyle = BorderStyle.Solid;
-                ReportViewerTestsReport.ProcessingMode = ProcessingMode.Local;
+                ReportViewerAppointmentReport.ProcessingMode = ProcessingMode.Local;
+                ReportViewerAppointmentReport.InternalBorderStyle = BorderStyle.Solid;
+                ReportViewerAppointmentReport.InternalBorderStyle = BorderStyle.Solid;
+                ReportViewerAppointmentReport.ToolBarItemBorderStyle = BorderStyle.Solid;
+                ReportViewerAppointmentReport.ProcessingMode = ProcessingMode.Local;
                 ReportViewerAppointmentReport.ProcessingMode = ProcessingMode.Local;
                 ReportViewerAppointmentReport.LocalReport.ReportPath = Server.MapPath("Report1.rdlc");
                 var entities = new ApplicationDbContext();

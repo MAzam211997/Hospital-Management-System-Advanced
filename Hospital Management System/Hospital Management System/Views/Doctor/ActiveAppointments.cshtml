@@ -21,8 +21,7 @@
 
 <p>
     @Html.ActionLink("Create New", "AddAppointment", null, new { @class = "btn btn-primary" }) &nbsp;
-    <a target="_blank" href="~/Reporting/DoctorsReports/AppointmentsReport.aspx" class="btn btn-info">View Report</a>
-    |
+    <a target="_blank" href="~/Reporting/DoctorsReports/AppointmentsReport.aspx?id=@ViewBag.DoctorId" class="btn btn-info">View Report</a>
 </p>
 <table id="table_id" class="table">
     <thead>

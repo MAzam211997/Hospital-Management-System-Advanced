@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PerOperationReport.aspx.cs" Inherits="Hospital_Management_System.Views.Doctor.PerOperationReport" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PerOperationReport.aspx.cs" Inherits="Hospital_Management_System.Reporting.DoctorsReports" %>
 
 <!DOCTYPE html>
 
